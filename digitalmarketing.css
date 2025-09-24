@@ -5,8 +5,8 @@
   --bg-color: #0a0a0f;
   --second-bg: #111122;
   --text-color: #fff;
-  --main-color: #ff6ec7; /* pink accent */
-  --accent-color: #ffb347; /* orange accent */
+  --main-color: #ff6ec7; 
+  --accent-color: #ffb347;
 }
 
 body { background: var(--bg-color); color: var(--text-color); line-height: 1.6; }
@@ -64,7 +64,7 @@ body { background: var(--bg-color); color: var(--text-color); line-height: 1.6; 
 .contact-form { max-width: 700px; margin: auto; }
 .contact-form input, .contact-form textarea { width: 100%; padding: 1rem; margin: .7rem 0; border-radius: .5rem; background: #1a1a2e; color: var(--text-color); border: 1px solid #333; }
 
-/* FOOTER */
+
 /* ===== Footer Styling ===== */
 .footer {
   background: #111;
@@ -82,10 +82,49 @@ body { background: var(--bg-color); color: var(--text-color); line-height: 1.6; 
 }
 
 .footer-col h4 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  position: relative;
+  font-size: 20px;
   font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Add an underline effect */
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 50px;
+  height: 3px;
+  background: #f1f16A; /* Neon green accent */
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Hover effect */
+.footer-col h4:hover::after {
+  width: 100px;
+}
+
+/* Responsive scaling */
+@media (max-width: 768px) {
+  .footer-col h4 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .footer-col h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-col h4 {
+    font-size: 16px;
+  }
 }
 
 .footer-col ul {
@@ -144,6 +183,7 @@ body { background: var(--bg-color); color: var(--text-color); line-height: 1.6; 
   font-size: 14px;
   color: #888;
 }
+
 .heading {
   font-size: 3rem;
   font-weight: 700;
@@ -206,19 +246,19 @@ body { background: var(--bg-color); color: var(--text-color); line-height: 1.6; 
   font-size: 2rem;
   color: #ff6ec7;
   cursor: pointer;
-  display: none; /* hidden on desktop */
+  display: none; 
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
   #menu-icon {
-    display: block; /* show hamburger on small screens */
+    display: block; 
   }
 
   .navbar {
     position: absolute;
     top: 70px;
-    right: -100%; /* hide off-screen */
+    right: -100%;
     background: #111;
     width: 200px;
     flex-direction: column;
@@ -235,6 +275,6 @@ body { background: var(--bg-color); color: var(--text-color); line-height: 1.6; 
   }
 
   .navbar.active {
-    right: 10px; /* slide in */
+    right: 10px; 
   }
 }
