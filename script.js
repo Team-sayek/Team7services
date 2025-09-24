@@ -54,7 +54,7 @@ ScrollReveal().reveal('.about-content', { origin: 'left' });
 
 /* typed js */
 const typed = new Typed('.multiple-text', {
-    strings: ['Designer!!', 'Web Devolpoers!!','Content Developers!!'],
+    strings: ['Designer!!', 'Web Develpoers!!','Content Developers!!'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
